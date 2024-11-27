@@ -421,7 +421,7 @@ color:white;
 }
 
 
-.prev-button, .next-button { position: absolute; top: 50%; transform: translateY(-50%); background-color: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 10px; cursor: pointer; border-radius: 50%; }
+.prev-button, .next-button { align-items: center;justify-content: center ;position: absolute; top: 50%; transform: translateY(-50%); background-color: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 5px; cursor: pointer; border-radius: 50%; }
 .prev-button { left: 10px; }
 .next-button { right: 10px; }
 .prev-button:hover, .next-button:hover { background-color: rgba(0, 0, 0, 0.8);}
@@ -525,19 +525,115 @@ color:white;
     align-items: center;
     text-align: center;
 }
-@media (max-width: 992px) {
+
+.mapa {
+    width: 40%; /* Ajuste conforme necessário */
+    max-width: 600px; /* Limita a largura máxima */
+    height: 300px; /* Altura do iframe */
+    border: 0; /* Remove a borda */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mapa-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Preenche toda a largura */
+}
+
+iframe { width: 100%; height: 100%; border: 0; }
+
+.ocultopc{
+    display: none;
+}
+
+
+@media (min-width: 768px) { 
+    .tab {
+        display: none !important; /* Força a ocultação */
+    }
+    
+    .tab-items {
+        display: none !important; /* Força a ocultação */
+    }
+}
+
+@media (max-width: 767px) {
     .fotoinicio{background-image: url(./imagens/pé.jpg);}
     .overlay{font-size: 10px;}
     .botao{font-size: 15px;}
     .noix{font-size: 17px;}
     .tratamentos{font-size: 17px;}
     .tt1{font-size: 17px;}
+    .oculto{display: none;}
+    .mapa-container { width: 100%; }
+    .mapa { width: 90%; /* Garante que o mapa ocupe toda a largura disponível na visão mobile */ height: auto; /* Ajuste conforme necessário para a altura */ }
+    .photo{width: 300px; /* Ajuste o tamanho conforme necessário */ height: auto; /* Mantém a proporção da imagem */ border-radius: 15px; /* Aplica cantos arredondados */ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */ transition: transform 0.2s;}
+    .photo:hover{transform: scale(1.05);}
+    .ocultopc{display: block;}
     .tt{margin: 30px 0 50px;}
+    .ocultar{display: none;}
+    .tab{display: flex;}
+    .tab-items{display: none;}
     .ultimo{font-size: 15px;}
-    .navbar {  flex-wrap: nowrap;  padding: 0.5rem 1rem;}
-    .m-item { display: block; /* Garante que cada item do menu ocupe uma linha separada */ width: 100%; /* Garante que cada item ocupe toda a largura do contêiner */ padding: 0.5rem 1rem; /* Adiciona espaçamento aos itens do menu */ }
-    .navbar-nav { flex-direction: column; /* Garante que os itens do menu se alinhem verticalmente */ width: 100%; text-align: left; }
-    .navbar-brand { order: 1; /* Mantém a marca à esquerda */ flex-grow: 1; /* Permite que o título ocupe o espaço disponível */ text-align: left; }
-    
+    .tab-items.active {display: flex;}
+}   
+
+
+.tab {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #b3e5fc;
+    color: rgb(0, 0, 0); /* Cor do texto */
+    font-family: Arial, sans-serif;
 }
 
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0277bd;
+}
+.hamburger {
+    font-size: 24px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.tab-items {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px; /* Ajusta para aparecer logo abaixo do header */
+    left    : 0;
+    width: 200px;
+    background-color: #b3e5fc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+
+
+}
+
+.tab-items a {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #0277bd;
+    font-weight: bold;
+    border-bottom: 1px solid #000000;
+
+}
+.tab-items a:hover {
+    background-color: #f1f1f1;
+}
+
+
+
+  
+  /* Mostra o menu quando ativado */
+.tab-items.active {
+    display: flex;
+}

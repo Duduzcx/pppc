@@ -23,6 +23,7 @@
 </head>
 <body>
   <header class="fixed-top">
+  <div class="ocultar">
     <div class="container-fluid">
       <div class="row">
         <nav class="navbar navbar-expand-lg navbar-dark  bg-nav">
@@ -32,6 +33,8 @@
                 PRO PÉ CLÍNICA
               </div>
             </a>
+
+
             <div class="menu">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -53,6 +56,27 @@
         </nav>
       </div>
     </div>
+  </div>
+
+  <!--MENU MOBILE-->
+
+
+
+  <div class="tab"> 
+    <div class="hamburger" onclick="toggleTab()">☰</div> 
+    <div class="title">PRO PÉ CLÍNICA</div> 
+  </div>
+    <div class="tab-items" id="tabItems">
+      <a href="#">Inicio</a>
+      <a href="#tratamentos">Tratamentos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contatos" >Contatos</a>
+      <a href="https://api.whatsapp.com/send?phone=5511977042763&text=Oii, gostaria de saber algumas informações e agendar um horário." target="_blank" class="m-item"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com/clinicapodologialapasp?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="m-item" ><i class="fa-brands fa-instagram "></i></a>
+    </div>
+
+    <script src="scripts.js"></script>
+
   </header>
   <main id="main">
     <!-- carrusel de inicio -->
@@ -134,6 +158,7 @@
       <div class="container mb-3">
         <div class="row d-flex align-items-center">
           <div class="col-12 col-md-6">
+        <div class="oculto">  
             <!-- carrusel de los medicos -->
             <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
               <div class="carousel-inner">
@@ -157,13 +182,20 @@
               </button>
             </div>
           </div>
+        </div>
           <div class="col-12 col-md-6 ">
             <div class="desc-empresa pt-2">
               <h4 class="subtitle"><b>Clinica Podológica PRO PÉ</b>  </h4>
               <br>
               <p  class =" noix" >
-                Pró Pé Podologia é um empreendimento que acredita na saúde e bem estar de forma holística, focada na saúde dos pés o qual reflete no corpo todo. Oferecemos serviços especializados e orientações personalizadas nos cuidados podológicos, visando não somente em tratar as necessidades existentes  mas atuar na prevenção  de futuras complicações. A saúde dos pés é fundamental para qualidade de vida e para isso temos a Pró pé Podologia para promover conforto e segurança no seu caminhar.
+                Pró Pé Podologia é uma clínica que acredita na saúde e bem estar de forma holística, focada na saúde dos pés o qual reflete no corpo todo. Oferecemos serviços especializados e orientações personalizadas nos cuidados podológicos, visando não somente em tratar as necessidades existentes  mas atuar na prevenção  de futuras complicações. A saúde dos pés é fundamental para a vida e para isso temos a Pró pé Podologia para promover conforto e segurança no seu caminhar.
               </p>
+              <br>
+              <!--carrossel do celular-->
+            <div class="ocultopc">   
+              <img src="./css/imagens/ppp1.png" class="photo" alt="clinica">
+            </div>
+            <br>
 
               <button type="button"class="btn-pag mt-2"><a href="https://api.whatsapp.com/send?phone=5511977042763&text=Oii, gostaria de saber algumas informações e agendar um horário." target="_blank">Agendar horário</a></button>
             </div>
@@ -210,8 +242,12 @@
       </div>
       <br>
       <br>
+      <div class="mapa-container">
+        <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.2815689132235!2d-46.70502202483172!3d-23.52237317882668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef8615e54f9f9%3A0xb79497cfd7d80aff!2sPr%C3%B3%20P%C3%A9%20Podologia%20Lapa!5e0!3m2!1spt-BR!2sbr!4v1732646176083!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      
       <br>
-        
+      <br>
             <p class="fi"><strong>ENTRE EM CONTATO CONOSCO TAMBÉM EM: </strong></p>
             <div class="redes-container">
             
@@ -226,11 +262,9 @@
             
         </div>
     </section> 
-           
     <br>
     <br>
     <br>
-
     <footer> 
         <div class="container">
             <p>&copy; Podología Clínica Pro Pé 2024<br>

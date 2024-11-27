@@ -20,3 +20,21 @@ function moveSlide(direction) {
 document.addEventListener('DOMContentLoaded', () => {
     showSlide(currentSlide);
 });
+
+
+function toggleTab() {
+    const tabItems = document.getElementById("tabItems");
+    tabItems.classList.toggle("active");
+  }
+  
+  // Fecha o menu ao clicar em um link
+document.querySelectorAll("#tabItems a").forEach(link => {
+    link.addEventListener("click", () => {
+      const tabItems = document.getElementById("tabItems");
+      tabItems.classList.remove("active"); // Fecha o menu removendo a classe 'active'
+    });
+});
+  
+  
+
+
